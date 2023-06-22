@@ -1,0 +1,101 @@
+.meus-favoritos{
+    height: calc(100vh - 120px);
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meus-favoritos h1{
+    margin-bottom: 14px;
+}
+
+.meus-favoritos span{
+    font-size: 18px;
+}
+
+.meus-favoritos ul{
+    width: 720px;
+}
+
+.meus-favoritos ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.meus-favoritos div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meus-favoritos div a{
+    text-decoration: none;
+    color: #116feb;
+    margin-right: 20px;
+}
+
+.meus-favoritos div a:hover{
+    text-decoration: underline;
+}
+
+.meus-favoritos div button{
+    border: none;
+    padding: 5px 6px;
+    background-color: #000;
+    transition: all 0.3s;
+}
+
+.meus-favoritos div button:hover{
+    cursor: pointer;
+    background-color: #e74c3c;
+}
+
+
+.homePage{
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    padding: 12px;
+    background-color: #116feb;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.homePage:hover{
+    background-color: #014cad;
+}
+
+/*mobile version*/
+
+@media screen and (max-width: 450px){
+    
+    .meus-favoritos h1{
+        font-size: 24px;
+    }
+
+    .meus-favoritos ul{
+        width: 400px;
+    }
+
+    .meus-favoritos ul li{
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .meus-favoritos span{
+        font-size: 14px;
+    }
+
+    .meus-favoritos div button{
+        border: none;
+        padding: 5px 6px;
+        background-color: #e74c3c;
+    }
+}

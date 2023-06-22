@@ -1,0 +1,93 @@
+
+
+.filme-info{
+    height: 85vh;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    padding: 0 8px;
+}
+
+.filme-info .title-filme{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px ;
+}
+
+.filme-info .title-filme a{
+    position: relative;
+    left: 0px;
+    font-size: 25px;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.filme-info .title-filme a:hover{
+    color: #116FEB;
+}
+
+.filme-info .title-filme h1{
+    text-align: center;
+    width: 100%;
+}
+
+.filme-info img{
+    border-radius: 9px;
+    width: 800px;
+    max-width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+}
+
+.filme-info h3{
+    margin-top: 14px;
+}
+
+.filme-info span{
+    margin: 14px 0;
+}
+
+.filme-info strong{
+    margin: 4px 0;
+}
+
+.area-buttons button{
+    margin-right: 12px;
+    margin-top: 14px;
+    margin-left: 0;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.area-buttons button:hover{
+    background-color: #116FEB;
+    color: #fff;
+}
+
+.area-buttons a{
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.area-buttons a:hover{
+    color: #fff;
+}
+
+@media screen and (max-width: 450px) {
+    .filme-info h1{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .filme-info .title-filme a{
+        font-size: 20px;
+    }
+}
