@@ -17,6 +17,7 @@ function RoutesApp(){
                 <Route path="/" element={ <Home/> } />
                 <Route path="/filme/:id" element={ <Filme/> } />
                 <Route path="/favoritos" element={ <Favoritos/> } />
+                <Route path="/slider" element={ <Slider /> } />
 
                 <Route path='*' element={<Erro/>} />
             </Routes>
