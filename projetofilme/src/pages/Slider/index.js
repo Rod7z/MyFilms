@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 import './slider.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
+import { Navigation } from "swiper";
 
 // URL DA API: movie/now_playing?api_key=1ee00a9aabf892b7b93a652c4a443991&language=pt-BR
 
@@ -25,7 +23,7 @@ function Slider(){
                 }
             })
             //console.log(response);
-            setFilmes(response.data.results.slice(0, 15));
+            setFilmes(response.data.results.slice(0, 16));
             setLoading(false);
         }
 
@@ -48,15 +46,14 @@ function Slider(){
 
             <Swiper
                 slidesPerView={8}
-                breakpoints={{ /*width tela: {
+                breakpoints={{ /*width tela: Xpx{
                     slidesPerView: x,
                     spaceBetween: x,
                     }*/
                 }}
                 loop={true}
-                pagination={{ clickable: true }}
                 navigation={true}
-                modules={[Pagination, Navigation]}
+                modules={[Navigation]}
             >    
                     {filmes.map((filme) => (
                         <SwiperSlide key={filme.id}>
