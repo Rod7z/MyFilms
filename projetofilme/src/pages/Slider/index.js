@@ -3,9 +3,11 @@ import api from '../../services/api'
 import { Link } from 'react-router-dom';
 import './slider.css';
 
+import { Swiper, SwiperSlide } from 'swiper/react'
+
 // URL DA API: movie/now_playing?api_key=1ee00a9aabf892b7b93a652c4a443991&language=pt-BR
 
-function Home(){
+function Slider(){
     const [filmes, setFilmes] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -39,21 +41,26 @@ function Home(){
 
     return(
         <div className="container">
-            <h1>Em cartaz:</h1>
-            <div className="lista-filmes" >
-                {filmes.map((filme) => {
-                    return(
-                        <article key={filme.id} >
-                            <strong>{filme.title}</strong><br/>
-                            <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} />
-                        <Link to={`/filme/${filme.id}`} >Descubra mais</Link>
-                        </article>
-                    )
-                })}
-            </div>
+            <h1>Slider com React JS - Swiper</h1>
+
+            <Swiper
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                navigation
+            >    
+                    {filmes.map((filme) => (
+                        <SwiperSlide key={filme.id}>
+                            <img 
+                                src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} 
+                                alt={filme.title} 
+                                className="slide-image"
+                            />
+                        </SwiperSlide>                    
+                    ))}
+            </Swiper>
         </div>
 
     );
 }
 
-export default Home;
+export default Slider;
