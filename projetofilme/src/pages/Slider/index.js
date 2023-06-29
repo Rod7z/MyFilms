@@ -3,6 +3,11 @@ import api from '../../services/api'
 import { Link } from 'react-router-dom';
 import './slider.css';
 
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination'; 
+import 'swiper/css/scrollbar';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from "swiper";
 
@@ -44,7 +49,7 @@ function Slider(){
         <div className="container">
             <h1>Slider com React JS - Swiper</h1>
 
-            <Swiper
+            <Swiper className="swiper"
                 slidesPerView={8}
                 spaceBetween={0}
                 breakpoints={{ /*width tela: Xpx{
@@ -55,7 +60,7 @@ function Slider(){
                 loop={true}
                 navigation={true}
                 modules={[Navigation]}
-            >    
+            >
                     {filmes.map((filme) => (
                         <SwiperSlide key={filme.id}>
                             <img 
