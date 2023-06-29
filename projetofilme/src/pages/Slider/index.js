@@ -3,7 +3,10 @@ import api from '../../services/api'
 import { Link } from 'react-router-dom';
 import './slider.css';
 
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
 
 // URL DA API: movie/now_playing?api_key=1ee00a9aabf892b7b93a652c4a443991&language=pt-BR
 
@@ -44,9 +47,16 @@ function Slider(){
             <h1>Slider com React JS - Swiper</h1>
 
             <Swiper
-                slidesPerView={1}
+                slidesPerView={8}
+                breakpoints={{ /*width tela: {
+                    slidesPerView: x,
+                    spaceBetween: x,
+                    }*/
+                }}
+                loop={true}
                 pagination={{ clickable: true }}
-                navigation
+                navigation={true}
+                modules={[Pagination, Navigation]}
             >    
                     {filmes.map((filme) => (
                         <SwiperSlide key={filme.id}>
