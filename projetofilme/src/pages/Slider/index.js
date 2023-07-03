@@ -11,6 +11,8 @@ import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from "swiper";
 
+import Footer from '../../components/Footer'
+
 // URL DA API: movie/now_playing?api_key=1ee00a9aabf892b7b93a652c4a443991&language=pt-BR
 
 function Slider(){
@@ -71,6 +73,8 @@ function Slider(){
                         </SwiperSlide>                    
                     ))}
             </Swiper>
+            
+            <Footer></Footer>
         </div>
 
     );
