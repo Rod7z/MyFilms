@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import api from '../../services/api'
 import { Link } from 'react-router-dom';
 import './home.css';
+import Footer from '../../components/Footer'
 
 // URL DA API: movie/now_playing?api_key=1ee00a9aabf892b7b93a652c4a443991&language=pt-BR
 
@@ -51,6 +52,7 @@ function Home(){
                     )
                 })}
             </div>
+            <Footer></Footer>
         </div>
 
     );

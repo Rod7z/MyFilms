@@ -1,3 +1,9 @@
+.container{
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
 .container h1{
     text-align: center;
     font-size: 30px;

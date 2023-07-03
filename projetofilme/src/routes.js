@@ -6,7 +6,6 @@ import Favoritos from './pages/Favoritos';
 import Slider from './pages/Slider'
 
 import Header from './components/Header';
-import Footer from './components/Footer';
 
 import Erro from './pages/Erro';
 
@@ -22,7 +21,6 @@ function RoutesApp(){
 
                 <Route path='*' element={<Erro/>} />
             </Routes>
-            <Footer/>
         </BrowserRouter>
     );
 }
