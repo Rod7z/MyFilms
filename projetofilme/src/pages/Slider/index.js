@@ -17,7 +17,7 @@ import Footer from '../../components/Footer'
 
 function Slider(){
     const [filmes, setFilmes] = useState([]);
-    const [bestFilms, setBestFilms] = useState([]);
+    const [topRated, setTopRated] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -41,7 +41,7 @@ function Slider(){
 
     useEffect(() => {
 
-        async function loadBestFilms(){
+        async function loadTopRated(){
             const response = await api.get('movie/top_rated', {
                 params:{
                     api_key: '1ee00a9aabf892b7b93a652c4a443991',
@@ -50,11 +50,11 @@ function Slider(){
                 }
             })
 
-            setBestFilms(response.data.results.slice(0, 16));
+            setTopRated(response.data.results.slice(0, 16));
             setLoading(false);
         }
 
-        loadBestFilms();
+        loadTopRated();
 
     }, [])
 
@@ -107,11 +107,11 @@ function Slider(){
                 navigation={true}
                 modules={[Navigation]}
             >
-                    {bestFilms.map((bestFilmes) => (
-                        <SwiperSlide key={bestFilmes.id}>
+                    {topRated.map((topRated) => (
+                        <SwiperSlide key={topRated.id}>
                             <img 
-                                src={`https://image.tmdb.org/t/p/original/${bestFilmes.poster_path}`} 
-                                alt={bestFilmes.title} 
+                                src={`https://image.tmdb.org/t/p/original/${topRated.poster_path}`} 
+                                alt={topRated.title} 
                                 className="slide-image"
                             />
                         </SwiperSlide>                    
