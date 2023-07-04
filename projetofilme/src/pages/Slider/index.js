@@ -71,7 +71,7 @@ function Slider(){
 
             <Swiper className="swiper"
                 slidesPerView={8}
-                spaceBetween={0}
+                spaceBetween={20}
                 /*breakpoints={{ width tela: Xpx{
                     slidesPerView: x,
                     spaceBetween: x,
