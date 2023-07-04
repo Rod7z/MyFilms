@@ -5,8 +5,7 @@ import './slider.css';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination'; 
-import 'swiper/css/scrollbar';
+import 'swiper/css/pagination';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from "swiper";
@@ -73,12 +72,12 @@ function Slider(){
             <Swiper className="swiper"
                 slidesPerView={8}
                 spaceBetween={0}
-                breakpoints={{ /*width tela: Xpx{
+                /*breakpoints={{ width tela: Xpx{
                     slidesPerView: x,
                     spaceBetween: x,
-                    }*/
-                }}
-                loop={true}
+                    }
+                }*/
+                loop={false}
                 navigation={true}
                 modules={[Navigation]}
             >
@@ -98,11 +97,11 @@ function Slider(){
             <Swiper className="swiper"
                 slidesPerView={8}
                 spaceBetween={0}
-                breakpoints={{ /*width tela: Xpx{
+                /*breakpoints={{ width tela: Xpx{
                     slidesPerView: x,
                     spaceBetween: x,
-                    }*/
-                }}
+                    }
+                }}*/
                 loop={true}
                 navigation={true}
                 modules={[Navigation]}

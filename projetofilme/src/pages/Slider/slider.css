@@ -21,8 +21,9 @@
 
 .swiper{
     display: flex;
-    width: 100%;
-    position: relative;
+    max-width: 1750px;
+    align-items: center;
+    justify-content: center;
 }
 
 .swiper-button-prev, .swiper-button-next {
@@ -44,4 +45,3 @@
     width: 200px;
     height: 300px;
 }
-
