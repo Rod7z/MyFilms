@@ -3,7 +3,7 @@ import api from '../../services/api'
 import { Link } from 'react-router-dom';
 import './home.css';
 
-// URL DA API: movie/now_playing?api_key=1ee00a9aabf892b7b93a652c4a443991&language=pt-BR
+// URL DA API: movie/now_playing?api_key={api_key}&language=pt-BR
 
 function Home(){
     const [filmes, setFilmes] = useState([]);
